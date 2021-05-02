@@ -2,15 +2,17 @@
 #include <iostream>
 #include <stdio.h> // To generate a random number
 #include <cstdlib> // Provides access to the NULL pointer 
-#include "LStack.hpp"
+#include "LStack.h"
+//#include "GameplayStack.h"
+
 using namespace std;
 
-int fibo(int n) {
-            if (n==1 || n==2) {
-                return 1;
-            }
-            return fibo(n-1) + fibo(n-2);
-        };
+// int fibo(int n) {
+//             if (n==1 || n==2) {
+//                 return 1;
+//             }
+//             return fibo(n-1) + fibo(n-2);
+//         };
 
 int main()
 {   
@@ -57,7 +59,7 @@ int main()
     cout << stack2 << endl; 
 
 
-    cout << fibo(6) << endl;
+    //cout << fibo(6) << endl;
 
     cout << " \n ** The program has finished ** \n" << endl;
     

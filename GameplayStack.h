@@ -1,9 +1,16 @@
 
+//*********************************************************************************************//
+//  Class GameplayStack (header)                                                               //
+//  Author: Mick Wiedermann                                                                    //
+//  Course: SENG1120 | Assignment 2                                                            //
+//  Date  : 2021-05-01                                                                         //
+//  Program Description: Header file for the GameplayStack Object.                             //
+//***********************************************************************************************
 
 #ifndef GPSTACK_H
 #define GPSTACK_H
 #include <iostream>
-#include "LStack.hpp"
+#include "LStack.h"
 #include "GamePiece.h"
 
 using namespace std;
@@ -12,21 +19,25 @@ template<typename T>
 class GameplayStack
 {
     public:
+        ////////// CONSTRUCTOR /////////////////////////
 
-        GameplayStack() // creates an array of 7 Stack* pointers
-
-        ~GameplayStack() // Destructor
-
-        void initializeBoard(const T& data) // 
-
-        void play(T& piece, int stackNum) /
         
-        void displayBoard()
+        GameplayStack();   
+
+        ////////// DESTRUCTOR ///////////////////////////
+
+        ~GameplayStack(); 
+
+        ////////// MUTATOR FUNCTIONS (SETTERS) //////////
+        void initializeBoard();  
+
+        void play(const string value, int stackNum); 
         
-        
+        ////////// ACCESSOR FUNCTIONS (GETTERS) /////////
+        T displayBoard();
 
     private:
-        int stackRef;
+        LStack<T> *gameArray[7];
 
 };
 
