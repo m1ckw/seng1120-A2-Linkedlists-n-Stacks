@@ -51,25 +51,17 @@ class LStack
         // Precondition: A element exists on the stack and contains data.
 		// Postcondition: Returns the data from the element on the top of the stack. 
         T peek();
-
+		
         // Precondition: None. 
-		// Postcondition: Returns the hieght of the list. 
-        const int size() const;
+		// Postcondition: Returns the TRUE if the list is empty. 
+		bool isEmpty();
+
+        int size();
+        
 
     private:
         LinkedList<T> *stack;                                   // Private member variable that points to the top element.
 };
-template<typename T>
-ostream &operator << (ostream &output, LStack<T> &stack) {      // Non Member function that overloads the output operator.
-	int height = stack.size();                                  // Sets the size variable to the current height of the stack.
-    LStack<T> tempStack;                                        // Creates a temp stack to reorder after printing.
-	for (int i=0; i < height; i++) {                            
-		output << stack.peek() << "\n";                         // Retrives the data from the top element.
-		tempStack.push(stack.pop());                            // Pushes the element above to the temp stack
-    }
-    for (int i=0; i < height; i++) {
-        stack.push(tempStack.pop());                            // Pushes all elements onto the original stack in the original order.
-    }
-	return output;                                              // Returns the data from each element. 
-}
+
+#include "LStack.hpp"
 #endif

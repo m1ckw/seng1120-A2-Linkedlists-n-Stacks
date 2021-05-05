@@ -118,4 +118,5 @@ class LinkedList
 		int length;													// Private member variable to track the length of the list.
 };
 
+#include "LinkedList.hpp"
 #endif

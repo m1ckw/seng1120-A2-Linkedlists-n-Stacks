@@ -31,78 +31,50 @@ class Node
 
         // Precondition: A node must exist. 
         // Postcondition: Deletes the node and sets the next and previous pointers to NULL.
-        ~Node() 
-        {
-            next = NULL;
-            previous = NULL;
-        }
+        ~Node();
 
         ////////// MUTATOR FUNCTIONS (SETTERS) //////////
 
         // Precondition: A node must exist.
         // Postcondition: Updates the data within the node to the data passed. 
-        void setData(const T& newData)  
-        {
-            data = newData;
-        }
+        void setData(const T& newData);
 
         // Precondition: A node must exist. 
         // Postcondition: Sets the current nodes next pointer to the location passed. 
-        void setNext (Node* nextLink)               
-        {
-            next = nextLink;
-        }   
+        void setNext (Node* nextLink);  
 
         // Precondition: A node must exist. 
         // Postcondition: Sets the current nodes previous pointer to the location passed.           
-        void setPrevious (Node* previousLink)       
-        {
-            previous = previousLink;
-        }  
+        void setPrevious (Node* previousLink); 
 
         ////////// ACCESSOR FUNCTIONS (GETTERS) /////////
 
         // Precondition: A node containing data must exist.
         // Postcondition: The data from the target node is returned.  
-        const T getData() const
-        {
-            return data;
-        }
+        const T getData() const;
 
         // Precondition: More than one node must exist.  
         // Postcondition: Returns the location of the next CONST node.
-        const Node* getNext() const                 
-        {
-            return next;
-        }
+        const Node* getNext() const;
 
         // Precondition: More than one node must exist. 
         // Postcondition: Returns the location of the next node.                
-        Node* getNext()                             
-        {
-            return next;
-        } 
+        Node* getNext();
 
         // Precondition: More than one node must exist.  
         // Postcondition: Returns the location of the previous CONST node.
-        const Node* getPrevious() const             
-        {
-            return previous;
-        } 
+        const Node* getPrevious() const;
 
         // Precondition: More than one node must exist. 
         // Postcondition: Returns the location of the previous node.
-        Node* getPrevious()                         
-        {
-            return previous;
-        }                           
+        Node* getPrevious();                           
 
     private:
-        T data;                             // Private member variable that stores the data types data.
+        T data;                            	 // Private member variable that stores the data types data.
         Node* next;                          // Private member variable that points to the next node.   
         Node* previous;                      // Private member variable that points to the next node.
 
 };
 
-
+#include "Node.hpp"
 #endif
