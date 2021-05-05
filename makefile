@@ -1,7 +1,7 @@
 CC=g++-10 #remove the -10 when not running on mac. 
 CFLAGS=-c -Wall -std=c++98 
 LDFLAGS=
-SOURCES=Node.h LinkedList.h LStack.h GamePiece.h GameplayStack.h Connect4DemoTemplate.cpp
+SOURCES=Node.h LinkedList.h LStack.h GamePiece.cpp GameplayStack.h Connect4DemoTemplate.cpp
 #DEPS=
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=Main
