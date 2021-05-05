@@ -10,8 +10,9 @@
 #ifndef GPSTACK_H
 #define GPSTACK_H
 #include <iostream>
+#include <cstdlib> 
 #include "LStack.h"
-#include "GamePiece.h"
+//#include "GamePiece.h"
 
 using namespace std;
 
@@ -26,19 +27,25 @@ class GameplayStack
 
         ////////// DESTRUCTOR ///////////////////////////
 
+
         ~GameplayStack(); 
 
         ////////// MUTATOR FUNCTIONS (SETTERS) //////////
+
+
         void initializeBoard();  
 
-        void play(const string value, int stackNum); 
+
+        void play(string value, int stackNum); 
         
         ////////// ACCESSOR FUNCTIONS (GETTERS) /////////
-        T displayBoard();
+
+        
+        void displayBoard();
 
     private:
         LStack<T> *gameArray[7];
 
 };
-
+#include "GameplayStack.hpp"
 #endif 
