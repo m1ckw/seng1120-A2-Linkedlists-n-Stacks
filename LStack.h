@@ -4,7 +4,7 @@
 //  Author: Mick Wiedermann                                                                    //
 //  Course: SENG1120 | Assignment 2                                                            //
 //  Date  : 2021-05-01                                                                         //
-//  Program Description: Header file for the Stack Object.                                     //
+//  Program Description: Templated Header file for the Stack Object built on the LinkedList.   //
 //***********************************************************************************************
 
 #ifndef LSTACK_H
@@ -22,12 +22,12 @@ class LStack
 
         // Precondition: None
 		// Postcondition: A new instance of an empty stack is created.
-		    // Stack height set to 0.
+		    // Stack height (LinkedList) set to 0.
         LStack();  
 
         // Precondition: None
-		// Postcondition: A new instance of a stack is created with a single element with the value passed.
-        	// Stack size is incremented to 1.
+		// Postcondition: A new instance of a stack is created with a single element containing the value passed.
+        	// Stack height (LinkedList) is incremented by 1.
         LStack(T &data);
 
         ////////// DESTRUCTOR ///////////////////////////
@@ -40,27 +40,25 @@ class LStack
 
         // Precondition: None, if no elements exist this function will create the first element.
 		// Postcondition: Adds a element to the top of the stack.
-        void push(T data);
+        void push(const T data);
 
         // Precondition: A element must already exist on the stack.  
-		// Postcondition: The top element will be deleted and any data contained returned. 
-        T pop();
+		// Postcondition: The top element will be removed and any data contained returned. 
+            // // Stack height (LinkedList) is decremented by 1.
+        T pop() const;
 
         ////////// ACCESSOR FUNCTIONS (GETTERS) /////////
 
         // Precondition: A element exists on the stack and contains data.
 		// Postcondition: Returns the data from the element on the top of the stack. 
-        T peek();
+        T peek() const;
 		
         // Precondition: None. 
 		// Postcondition: Returns the TRUE if the list is empty. 
-		bool isEmpty();
-
-        int size();
-        
+		bool isEmpty(); 
 
     private:
-        LinkedList<T> *stack;                                   // Private member variable that points to the top element.
+        LinkedList<T> *list;                                   // Private member variable that points to a LinkedList.
 };
 
 #include "LStack.hpp"
