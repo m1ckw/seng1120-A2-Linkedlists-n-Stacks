@@ -4,7 +4,7 @@
 //  Author: Mick Wiedermann                                                                    //
 //  Course: SENG1120 | Assignment 2                                                            //
 //  Date  : 2021-05-01                                                                         //
-//  Program Description: Header file for the doubly linked list Object. 					   //
+//  Program Description: Templated Header file for the Doubly Linked List Object.			   //
 //***********************************************************************************************
 
 #ifndef LINKEDLIST_H

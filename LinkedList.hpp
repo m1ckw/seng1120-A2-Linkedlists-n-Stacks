@@ -4,7 +4,7 @@
 //  Author: Mick Wiedermann                                                                    //
 //  Course: SENG1120 | Assignment 2                                                            //
 //  Date  : 2021-05-01                                                                         //
-//  Program Description: Implementation file for the doubly Linked List Object.                //
+//  Program Description: Implementation file for the Templated Doubly Linked List Object.      //
 //***********************************************************************************************
 
 
