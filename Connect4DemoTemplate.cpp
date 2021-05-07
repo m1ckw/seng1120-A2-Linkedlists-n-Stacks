@@ -4,6 +4,9 @@
 //Course: SENG1120/6120
 //Program Description: This program demonstrates the basic functionality of a Connect Four game. 
 
+//Mick Wiedermann | c3315267 | Seng1120-Assignment2 | 2021-05-01.
+//Intergrated this demo program with my templated GameplayStack Class built on my LStack Class.
+
 #include <iostream>
 #include <cstdlib>
 #include "GameplayStack.h"
@@ -31,8 +34,6 @@ int main()
 
 		game.initializeBoard();
 
-		cout << "we got to here" << endl;
-
 		game.play("X", 4); // place a "X" piece on the stack 3 (stacks are indexed 1 to 7)
 		game.play("O", 5); game.play("X", 3); game.play("O", 5); game.play("X", 2); game.play("O", 1); 
 		game.play("X", 4); game.play("O", 5); game.play("X", 3); game.play("O", 5);
@@ -44,6 +45,7 @@ int main()
 	{ // GAME 2: X wins horizontal
 
 	 	game.initializeBoard();
+		
 
 	 	game.play("X", 3); // place a "X" piece on the stack 3 (stacks are indexed 1 to 7)
 	 	game.play("O", 5); game.play("X", 1); game.play("O", 6); game.play("X", 2); game.play("O", 4); 

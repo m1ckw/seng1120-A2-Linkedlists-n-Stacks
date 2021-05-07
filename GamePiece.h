@@ -1,6 +1,9 @@
 //Course: SENG1120
 //Coded by: Alex Mendes 
 
+//Utilised by Mick Wiedermann | c3315267 | Seng1120 Assignment2 | 2021-05-01.
+//Intergrated this Class with my templated GameplayStack Class built on my LStack Class.
+
 #ifndef GAMEPIECE_H
 #define GAMEPIECE_H
 #include <string>
