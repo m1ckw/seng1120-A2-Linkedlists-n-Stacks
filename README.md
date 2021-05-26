@@ -1,5 +1,5 @@
 
-# seng1120_A2 - Grade Received: 100% + Bonus Marks for templating classes.
+# seng1120_A2 - Grade: 100% + Bonus Marks
 
 SENG1120 is a Data Structures course run by the University of Newcastle. 
 
